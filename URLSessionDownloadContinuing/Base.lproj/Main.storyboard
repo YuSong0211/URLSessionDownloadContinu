@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="URLSessionDownloadContinuing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQI-jl-gIJ">
+                                <rect key="frame" x="26" y="37" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Vgd-Da-P5Z"/>
+                                </constraints>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ur2-0q-C9N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3I-ob-hce">
+                                <rect key="frame" x="26" y="94" width="46" height="30"/>
+                                <state key="normal" title="暂停"/>
+                                <connections>
+                                    <action selector="pasueClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnP-Zf-RF6"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="11V-0w-JzW">
+                                <rect key="frame" x="0.0" y="294" width="600" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="zNb-Zj-Z5w"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhf-To-rW1">
+                                <rect key="frame" x="26" y="157" width="46" height="30"/>
+                                <state key="normal" title="继续"/>
+                                <connections>
+                                    <action selector="resumeClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Si7-LE-QeO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S3I-ob-hce" firstAttribute="trailing" secondItem="Xhf-To-rW1" secondAttribute="trailing" id="QIt-9C-GZn"/>
+                            <constraint firstItem="Xhf-To-rW1" firstAttribute="top" secondItem="S3I-ob-hce" secondAttribute="bottom" constant="33" id="RKx-ML-8r7"/>
+                            <constraint firstItem="XQI-jl-gIJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="XN3-ed-G3I"/>
+                            <constraint firstItem="11V-0w-JzW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cVp-C9-Vwz"/>
+                            <constraint firstItem="11V-0w-JzW" firstAttribute="top" secondItem="Xhf-To-rW1" secondAttribute="bottom" constant="107" id="cVp-xH-3OY"/>
+                            <constraint firstItem="XQI-jl-gIJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="feX-r0-OrH"/>
+                            <constraint firstItem="XQI-jl-gIJ" firstAttribute="trailing" secondItem="S3I-ob-hce" secondAttribute="trailing" id="gAF-nb-q8H"/>
+                            <constraint firstItem="S3I-ob-hce" firstAttribute="leading" secondItem="Xhf-To-rW1" secondAttribute="leading" id="gQz-Xk-zqm"/>
+                            <constraint firstItem="XQI-jl-gIJ" firstAttribute="leading" secondItem="S3I-ob-hce" secondAttribute="leading" id="nNv-Rn-wSx"/>
+                            <constraint firstItem="S3I-ob-hce" firstAttribute="top" secondItem="XQI-jl-gIJ" secondAttribute="bottom" constant="27" id="t86-JT-nsZ"/>
+                            <constraint firstAttribute="trailing" secondItem="11V-0w-JzW" secondAttribute="trailing" id="wS0-Yt-3E9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressVeiw" destination="11V-0w-JzW" id="XvI-BK-fNZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="349"/>
+        </scene>
+    </scenes>
+</document>
